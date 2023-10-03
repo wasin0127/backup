@@ -17,7 +17,7 @@ export default function manage() {
     const [visibleItems, setVisibleItems] = useState(initialVisibleItems);
     const [backupseverData, setBackupseverData] = useState<Backupsever[]>([]); // Use the defined interface here
     const [isLoading, setIsLoading] = useState(true);
-    
+
 
 
     const handleLoadMore = () => {
