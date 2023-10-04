@@ -38,9 +38,6 @@ export default function manage() {
     }, []);
 
 
-
-
-
     return (
         <>
             <LayoutPages>
@@ -58,8 +55,18 @@ export default function manage() {
                                                 วันที่
                                             </th>
                                             <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-                                                จัดการ
+                                                ชื่อเครื่อง
                                             </th>
+                                            <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                                ชื่อ OS
+                                            </th>
+                                            <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                                สถานะ
+                                            </th>
+                                            <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                                                หมายเหตุ
+                                            </th>
+                                           
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -71,19 +78,20 @@ export default function manage() {
                                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-light">
                                                     {backupsever.date}
                                                 </td>
-                                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-light">
-                                                    <img
-                                                        src={`data:image/่jpeg;base64,${backupsever.date}`} // ใช้ backupsever.date ที่มีข้อมูล base64
-                                                        alt="Base64 Image"
-                                                    />
-                                                </td>
+                                               
                                             </tr>
                                         ))}
                                     </tbody>
                                 </table>
                             </div>
                         </div>
+                      
                     </div>
+                    {backupseverData.slice(0, visibleItems).map((backupsever, index) => (
+                            <div className=" mx-auto text-center ">
+                            <img src={backupsever.img} alt="User Profile" className="" style={{ width: '100px', height: '100px' }} />
+                            </div>
+                        ))}
                 </div>
             </LayoutPages>
 
