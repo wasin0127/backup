@@ -71,7 +71,7 @@ export default function Login() {
                     </form>
 
                     <div className="mt-6 text-blue-500 text-center">
-                        <a href="#" className="hover:underline">Sign up </a>
+                        <a href="#" className="hover:underline">Sign up Here</a>
                     </div>
 
                     <div className="mt-6 text-blue-500 text-center">
